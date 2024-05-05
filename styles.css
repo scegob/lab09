@@ -1,0 +1,231 @@
+
+/* TASK A. Create a body border, set text color, and set margins/width
+* Create a body border:
+- 100px wide border
+- color rgba(51, 0, 111, 0.6)
+* Make all text in the document the grayish color: #505050.
+* Set the maximum width of the document to 800px, but nominally 80% with a
+20px padding
+* Set the margin:
+- to 30px
+- and set to auto scale with browser window size
+Hint: Suggested fonts --> Ubuntu, adobe-garamond-pro
+*/
+body {
+    border: 100px solid rgba(51, 0, 111, 0.6);
+    color: #505050;
+    max-width: 800px;
+    width: 80%;
+    padding: 20px;
+    margin: 30px auto;
+    font-family: 'Ubuntu', 'Adobe Garamond Pro', serif;
+}
+/* TASK B. Adjust paragraph font size
+Set all paragraph font size to 1.2em of the root container
+*/
+p {
+    font-size: 1.2em;
+}
+
+.purpleLine {
+    border-left: 10px solid rgba(51, 0, 111, 0.6);
+    padding-left: 10px;
+}
+/* TASK C: Create a horizontal line
+Create a styled horizonal rule:
+- 2px tall
+- gray gradient fill from the right
+- end points: rgba(0, 0, 0, 0.1)
+- center: rgba(0, 0, 0, 0.3)
+Hint: Use special type of background-image --> linear-gradient
+*/
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+}
+/* TASK D: Adjust citation letter spacing
+Wikipedia citation should have:
+- wider letter spacing of 0.1em
+- oblique font style
+- smaller font size of 0.8em
+*/
+.citation {
+    letter-spacing: 0.1em;
+    font-style: oblique;
+    font-size: 0.8em;
+}
+/* TASK E: Style footnotes
+Make all footnotes:
+- superscript by 0.6em
+- blue
+Hint: Use vertical-align: super
+*/
+.footnote {
+    vertical-align: super;
+    font-size: 0.6em;
+    color: blue;
+}
+/* TASK F: Format heading picture
+Center align the head picture and all of its text
+Hint: text-align applies not only to text but all objects in the box
+*/
+.headpic {
+    text-align: center;
+}
+/* TASK G: Size heading picture
+Make the head picture image 90% of the container width
+*/
+.headpic img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+/* TASK H: Style figure caption
+Style the head picture figure caption:
+- letters spaced by 0.15em
+- text size reduced to 0.8em
+*/
+.headpic figcaption {
+    letter-spacing: 0.15em;
+    font-size: 0.8em;
+}
+/* TASK I: Style intro reference paragraph
+Give the introductory reference paragraph:
+- a left border --> border-left
+- the same color as the background --> rgba(r,g,b, 0.6)
+- offset the paragraph from the left by 8 pixels using padding-left
+*/
+p.intro {
+    border-left: 8px solid rgba(r, g, b, 0.6);
+    padding-left: 8px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0); /* Change to the desired background color */
+}
+/* TASK J: Style main heading
+Make the main heading:
+- center aligned
+- 2.5 times the size of the normal <h1> by referencing the root size
+- remove all extraneous margin using margin: 0 auto
+*/
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 auto;
+}
+/* TASK K: Transform heading capitalizations
+For all h1 and h2:
+- use text-transform to capitalize them
+- make them the same color as the lavender theme color 10% darker (i.e.
+alpha= 0.6 + 0.1)
+*/
+h1, h2 {
+    text-transform: capitalize;
+    color: rgba(51, 0, 111, 0.6);
+}
+
+/* TASK L: Style first character of first paragraph
+Make the first character of paragraph 1:
+- twice the size (i.e. 2em) of all other p characters
+- same color as the h1 text
+- bold
+*/
+#para1::first-letter {
+    font-size: 2em;
+    color: inherit; /* Inherit color from h1 text */
+    font-weight: bold;
+}
+/* =======================COLOR SWATCH TABLE =================== */
+/* TASK M: Create color-swatch table
+Create a table of 4 swatch colors:
+- add 3 rows additional rows for the hex, rgb and hsl data
+- add a lightgray 2px border around this table
+- center the table
+- use the san-serif font Calibri for all text in the color table
+Hint: use margin-left: auto and margin-right: auto as a CSS trick for
+centering
+*/
+table.swatches {
+    
+
+
+
+}
+
+/* TASK N: Style swatch table
+Make all swatch cells:
+- 160px wide
+- center align all text in these table cells
+- have a lightgray border of 2px around all swatch cells **except** for
+the color swatches
+*/
+table.swatches td {
+    width: 160px;
+    text-align: center;
+    border: 2px solid lightgray;
+}
+/* TASK O: Make table header row
+Set the swatch table first row properties:
+- 50px tall
+- all text uppercase
+- slightly expanded text of 0.2em.
+Hint: use text-transform and letter-spacing
+*/
+tr:first-child {
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+/* TASK P: Style table content
+* Set the four swatch cells to these background colors:
+#e6e6fa
+#b57edc
+#9966cc
+#4b2e83
+* Set the text color to lightgray, **except** for the first cell, which
+should be black
+*/
+#lav1 {
+    background-color: #e6e6fa;
+    color: black;
+}
+#lav2 {
+    background-color: #b57edc;
+    color: lightgray;
+}
+#lav3 {
+    background-color: #9966cc;
+    color: lightgray;
+}
+#lav4 {
+    background-color: #4b2e83;
+    color: lightgray;
+}
+/* ================ PHOTO GALLERY ============== */
+/* TASK Q: Set photo gallery location
+* Center the photo gallery
+* Make a grid of 3 photos across (for full size views)
+Hint: temporarily turn on a border to see where the photos container is
+*/
+.photos {
+text-align: center;
+/* border: 1px solid black; */
+}
+/* TASK R: Create photo grid
+Create a grid of 3 across for 6 or 9 photos
+Hint: one HTML table cell has been designed to enclose the whole grid, but
+use width of 30% and margin of 1.3% for the images to "float" them into a 3 picture
+wide grid
+*/
+.photos img {
+    width: 30%;
+    margin: 1.3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* TASK S: Style photo gallery border
+Wrap a thin lightgray border around the photo gallery
+*/
+table#photos {
+    border: 1px solid lightgray;
+}
